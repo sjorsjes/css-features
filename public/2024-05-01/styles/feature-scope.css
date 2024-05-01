@@ -1,0 +1,40 @@
+.feature-scope {
+  display: flex;
+  justify-content: space-around;
+
+  .example,
+  .code {
+    margin: 0;
+    padding: var(--gap-xs);
+  }
+
+  .code {
+    padding: 0 var(--gap) var(--gap-xs) var(--gap-xs);
+
+    border: 1px solid var(--color-brown);
+  }
+
+  button {
+    padding: var(--gap-s) var(--gap);
+
+    color: var(--color-white);
+  }
+
+  @scope (.blue) {
+    button {
+      background-color: blue;
+    }
+  }
+
+  @scope (.green) {
+    button {
+      background-color: green;
+    }
+  }
+
+  @scope (.red) {
+    button {
+      background-color: red;
+    }
+  }
+}

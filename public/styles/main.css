@@ -1,0 +1,50 @@
+@import url('./base.css');
+
+body {
+  display: grid;
+  grid-template-rows: 50px min-content auto;
+  grid-template-columns: 10% 10% 20% auto;
+}
+
+.biker {
+  grid-row: 2;
+  grid-column: 2 / 4;
+
+  aspect-ratio: 1 / 1.5;
+
+  background-image: url('/images/hero.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  mask-image: url('/images/mask.png');
+  mask-position: top center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+main {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
+  grid-row: 1 / -1;
+  grid-column: 3 / -1;
+
+  background-color: var(--color-yellow);
+}
+
+.content {
+  grid-row: 2;
+  grid-column: 4 / -1;
+}
+
+small {
+  grid-row: 3;
+  grid-column: 1 / -1;
+
+  padding: var(--gap);
+}
+
+h1 {
+  margin-left: -3rem;
+}

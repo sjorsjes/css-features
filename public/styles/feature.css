@@ -1,0 +1,38 @@
+.feature {
+  position: relative;
+  min-height: 100vh;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-s);
+
+    h2 {
+      margin: 0;
+    }
+
+    a {
+      font-size: var(--heading-size);
+    }
+  }
+
+  + .feature {
+    margin-top: 6rem;
+    padding-top: 6rem;
+
+    border-top: 1px dotted var(--color-brown);
+  }
+
+  .back-to-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: calc(var(--gap-xs) / 2) var(--gap-xs);
+
+    background: var(--color-brown);
+
+    color: var(--color-yellow);
+  }
+}

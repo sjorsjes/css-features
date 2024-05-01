@@ -1,0 +1,15 @@
+# File types
+*.md
+*.mdx
+*.yml
+*.hbs
+
+# Build output
+.rollup.cache
+*.generated.ts
+dist
+
+# Node.js
+package.json
+package-lock.json
+node_modules

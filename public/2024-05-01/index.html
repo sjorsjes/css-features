@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>01 mei 2024</title>
+
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <aside>
+      <ol class="toc">
+        <li>
+          <a href="#container">@container()</a>
+        </li>
+        <li>
+          <a href="#scope">@scope()</a>
+        </li>
+        <li>
+          <a href="#text-wrap-pretty">text-wrap: pretty</a>
+        </li>
+        <li>
+          <a href="#text-wrap-balance">text-wrap: balance</a>
+        </li>
+      </ol>
+    </aside>
+    <div class="biker"></div>
+    <main>
+      <h1>CSS Features</h1>
+
+      <div class="content">
+        <section class="feature" id="container">
+          <header>
+            <h2>@container()</h2>
+            <a href="https://caniuse.com/css-container-query-units">#</a>
+          </header>
+
+          <p>
+            Container queries are an alternative to media queries, which apply
+            styles to elements based on viewport size or other device
+            characteristics.
+          </p>
+
+          <div class="feature-container">
+            <div class="visual"></div>
+          </div>
+        </section>
+
+        <section class="feature" id="scope">
+          <a href="#top" class="back-to-top">top</a>
+
+          <header>
+            <h2>@scope()</h2>
+            <a href="https://caniuse.com/css-cascade-scope">#</a>
+          </header>
+
+          <p>
+            Allows CSS rules to be scoped to part of the document, with upper
+            and lower limits described by selectors.
+          </p>
+
+          <div class="feature-scope">
+            <div class="example">
+              <div class="red">
+                <div class="green">
+                  <div class="blue">
+                    <button>Click</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <pre class="code">
+  <code>
+  &lt;div class=&quot;red&quot;&gt;
+    &lt;div class=&quot;green&quot;&gt;
+      &lt;div class=&quot;blue&quot;&gt;
+        &lt;button&gt;Click&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+
+            <pre class="code">
+<code>
+@scope (.blue) {
+    button {
+        background-color: blue;
+    }
+}
+
+@scope (.green) {
+    button {
+        background-color: green;
+    }
+}
+
+@scope (.red) {
+    button {
+        background-color: red;
+    }
+}
+</code>
+</pre>
+          </div>
+        </section>
+
+        <section class="feature" id="text-wrap-pretty">
+          <a href="#top" class="back-to-top">top</a>
+
+          <header>
+            <h2>text-wrap: pretty;</h2>
+            <a href="https://caniuse.com/mdn-css_properties_text-wrap_pretty">
+              #
+            </a>
+          </header>
+
+          <p>
+            Opt-in optimized text wrapping, for beauty over speed. Prevents a
+            <a href="https://nl.wikipedia.org/wiki/Hoerenjong_(typografie)">
+              hoerenjong</a
+            >.
+          </p>
+
+          <div class="feature-text-wrap feature-text-wrap--pretty">
+            <div class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
+              dolor ac dui consectetur vehicula.
+            </div>
+            <div class="text text--pretty">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
+              dolor ac dui consectetur vehicula.
+            </div>
+          </div>
+        </section>
+
+        <section class="feature" id="text-wrap-balance">
+          <a href="#top" class="back-to-top">top</a>
+
+          <header>
+            <h2>text-wrap: balance</h2>
+            <a href="https://caniuse.com/css-text-wrap-balance"> # </a>
+          </header>
+
+          <p>
+            Allows multiple lines of text to have their lines broken in such a
+            way that each line is roughly the same width, often used to make
+            headlines more readable and visually appealing.
+          </p>
+
+          <div class="feature-text-wrap feature-text-wrap--balance">
+            <h2 class="text">
+              lorem ipsum dolor sit amet consectetur adipiscing elit
+            </h2>
+            <h2 class="text text--balance">
+              lorem ipsum dolor sit amet consectetur adipiscing elit
+            </h2>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
